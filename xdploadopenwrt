@@ -4,6 +4,6 @@ START=95
 STOP=01
 start_service() {
     procd_open_instance
-    procd_set_param command /usr/bin/bpfw /etc/xdp/bpfw_le.o sfp1:xdpnative cloud:xdp lan1:xdp lan2:xdp lan3:xdp lan4:xdp phy0-ap0:xdp phy1-ap0:xdp
+    procd_set_param command /usr/bin/bpfw /etc/xdp/bpfw/kernel/obj/bpfw_le.o sfp1:xdpnative cloud:xdp lan1:xdp lan2:xdp lan3:xdp lan4:xdp phy0-ap0:xdp phy1-ap0:xdp
     procd_close_instance
 }
