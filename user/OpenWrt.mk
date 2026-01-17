@@ -4,7 +4,7 @@ OPENWRT ?= ~/openwrt
 
 TOOLCHAIN_DIR := $(lastword $(wildcard $(OPENWRT)/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.3.0_musl))
 TARGET_DIR    := $(lastword $(wildcard $(OPENWRT)/staging_dir/target-aarch64_cortex-a53_musl))
-CC			  := $(notdir   $(wildcard $(TOOLCHAIN_DIR)/bin/aarch64-openwrt-linux-gcc))
+CC			  := $(notdir   $(wildcard $(TOOLCHAIN_DIR)/bin/aarch64-openwrt-linux-musl-gcc-14.3.0))
 
 ifndef TOOLCHAIN_DIR
 $(error "'$(OPENWRT)/staging_dir/toolchain-$(ARCH)_$(SUFFIX)' not found")
